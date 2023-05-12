@@ -1,0 +1,18 @@
+{
+    "name": "Blazor.Shared",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "unocss \"./**/*.razor\" --out-file=\"./wwwroot/css/atomic.css\" --watch",
+        "build": "unocss \"./**/*.razor\"  --out-file=\"./wwwroot/css/atomic.css\" "
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@unocss/cli": "^0.51.12",
+        "@unocss/preset-uno": "^0.51.12",
+        "unocss": "^0.51.12"
+    }
+}
