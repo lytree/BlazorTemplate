@@ -1,0 +1,20 @@
+﻿<Window x:Class="Blazor.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Blazor.WPF"
+        xmlns:shared="clr-namespace:Blazor.Shared;assembly=Blazor.Shared"
+        xmlns:blazor="http://schemas.microsoft.com/winfx/2006/xaml/presentation/blazor"
+        xmlns:web="clr-namespace:Microsoft.AspNetCore.Components.Web;assembly=Microsoft.AspNetCore.Components.Web"
+        mc:Ignorable="d"
+        Title="Tool" Margin="0" Padding="0" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <blazor:BlazorWebView  Margin="0" Padding="0" HostPage="wwwroot\index.html" Services="{DynamicResource services}">
+            <blazor:BlazorWebView.RootComponents>
+                <blazor:RootComponent Selector="#app" ComponentType="{x:Type shared:Main}" />
+                <blazor:RootComponent Selector="head::after" ComponentType="{x:Type web:HeadOutlet}" />
+            </blazor:BlazorWebView.RootComponents>
+        </blazor:BlazorWebView>
+    </Grid>
+</Window>

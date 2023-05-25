@@ -1,13 +1,11 @@
 using Blazor.Server;
 using Blazor.Shared;
-using Blazor.Shared.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSingleton<IPlatformNameProvider, PlatformNameProvider>();
 
 var app = builder.Build();

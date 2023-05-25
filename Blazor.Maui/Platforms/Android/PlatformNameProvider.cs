@@ -1,6 +1,6 @@
 ﻿using Blazor.Shared;
 
-namespace Blazor.Maui.Platforms.Android;
+namespace Blazor.Maui;
 
 public class PlatformNameProvider : IPlatformNameProvider
 {

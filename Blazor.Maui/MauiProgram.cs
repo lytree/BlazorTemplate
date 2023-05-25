@@ -1,5 +1,4 @@
 ﻿using Blazor.Shared;
-using Blazor.Shared.Data;
 
 namespace Blazor.Maui;
 public static class MauiProgram
@@ -19,7 +18,7 @@ public static class MauiProgram
 		builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
 
-		builder.Services.AddSingleton<WeatherForecastService>();
+	
 		builder.Services.AddSingleton<IPlatformNameProvider, PlatformNameProvider>();
 
 		return builder.Build();
