@@ -5,18 +5,39 @@
 
 Welcome to your new app running on @_platformNameProvider.GetPlatformName().
 
-<div class="dropdown" data-bs-theme="dark">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
-        Dark dropdown
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
-        <li><a class="dropdown-item active" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-    </ul>
+<div class="layui-form layui-row layui-col-space16">
+    <div class="layui-col-md6">
+        <select>
+            <option value="">请选择</option>
+            <option value="AAA">选项 A</option>
+            <option value="BBB">选项 B</option>
+            <option value="CCC">选项 C</option>
+        </select>
+    </div>
+    <div class="layui-col-md6">
+        <select>
+            <option value="">请选择</option>
+            <option value="AAA">选项 A</option>
+            <option value="BBB">选项 B</option>
+            <option value="CCC" selected>选项 C</option>
+        </select>
+    </div>
+    <div class="layui-col-md6">
+        <select disabled>
+            <option value="">禁用选择框</option>
+            <option value="AAA">选项 A</option>
+            <option value="BBB">选项 B</option>
+            <option value="CCC">选项 C</option>
+        </select>
+    </div>
+    <div class="layui-col-md6">
+        <select>
+            <option value="">请选择</option>
+            <option value="AAA">选项 A</option>
+            <option value="BBB" disabled>选项 B（禁用选项）</option>
+            <option value="CCC">选项 C</option>
+        </select>
+    </div>
 </div>
 
 <SurveyPrompt Title="How is Blazor working for you?" />

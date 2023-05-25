@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
+using Blazor.Shared;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -41,7 +42,7 @@ namespace Blazor.WPF
 		{
 			var container = new ContainerBuilder();
 
-
+			container.RegisterType<PlatformNameProvider>().As<IPlatformNameProvider>();
 			container.Populate(services);
 
 			return container.Build();

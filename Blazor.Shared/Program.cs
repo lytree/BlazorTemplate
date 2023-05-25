@@ -1,5 +1,4 @@
-﻿using AntDesign.ProLayout;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,17 +17,7 @@ namespace Blazor.Shared
 		}
 		public static void Configuration(ServiceCollection services)
 		{
-			services.Configure<ProSettings>(x =>
-			{
-				x.Title = "Ant Design Pro";
-				x.NavTheme = "light";
-				x.Layout = "side";
-				x.PrimaryColor = "daybreak";
-				x.ContentWidth = "Fluid";
-				x.HeaderHeight = 64;
-				x.FooterRender = false;
-
-			});
+			
 		}
 	}
 }
