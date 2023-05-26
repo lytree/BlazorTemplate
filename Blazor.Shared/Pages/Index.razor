@@ -1,43 +1,40 @@
 ﻿@page "/"
 @inject IPlatformNameProvider _platformNameProvider
 
-<h1>Hello, world!</h1>
+<PageContainer Title="Welcome">
+    <Card>
+        <Alert Message="AntDesign.Templates have been published to nuget, you can download and use them directly."
+               Type="success"
+               ShowIcon="true"
+               Banner
+               Style="margin: -12px; margin-bottom: 24px" />
+        <Text Strong>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.nuget.org/packages/AntDesign.Templates">
+                Use .NET CLI to install the latest template quickly.
+            </a>
+        </Text>
+        <pre class="pre"><code><Text Copyable> dotnet new --install AntDesign.Templates::0.1.0-*</Text></code></pre>
+        <Text Strong
+              Style="margin-bottom: 12px">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design-blazor/ant-design-pro-blazor">
+                Create an empty blazor WebAssembly project
+            </a>
+        </Text>
+        <pre class="pre"><code><Text Copyable> dotnet new antdesign --host=wasm</Text></code></pre>
+        <Text Strong
+              Style="margin-bottom: 12px">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design-blazor/ant-design-pro-blazor">
+                Create a blazor webassembly project with all pages.
+            </a>
+        </Text>
+        <pre class="pre"><code><Text Copyable> dotnet new antdesign --host=wasm --full</Text></code></pre>
+    </Card>
+    <p style="text-align: center; margin-top: 24px;">
+        Want to add more pages? Please refer to
+        <a href="https://github.com/ant-design-blazor/ant-design-pro-blazor" target="_blank" rel="noopener noreferrer">
+            ant-design-pro-blazor project
+        </a>
+        .
+    </p>
+</PageContainer>
 
-Welcome to your new app running on @_platformNameProvider.GetPlatformName().
-
-<div class="layui-form layui-row layui-col-space16">
-    <div class="layui-col-md6">
-        <select>
-            <option value="">请选择</option>
-            <option value="AAA">选项 A</option>
-            <option value="BBB">选项 B</option>
-            <option value="CCC">选项 C</option>
-        </select>
-    </div>
-    <div class="layui-col-md6">
-        <select>
-            <option value="">请选择</option>
-            <option value="AAA">选项 A</option>
-            <option value="BBB">选项 B</option>
-            <option value="CCC" selected>选项 C</option>
-        </select>
-    </div>
-    <div class="layui-col-md6">
-        <select disabled>
-            <option value="">禁用选择框</option>
-            <option value="AAA">选项 A</option>
-            <option value="BBB">选项 B</option>
-            <option value="CCC">选项 C</option>
-        </select>
-    </div>
-    <div class="layui-col-md6">
-        <select>
-            <option value="">请选择</option>
-            <option value="AAA">选项 A</option>
-            <option value="BBB" disabled>选项 B（禁用选项）</option>
-            <option value="CCC">选项 C</option>
-        </select>
-    </div>
-</div>
-
-<SurveyPrompt Title="How is Blazor working for you?" />
